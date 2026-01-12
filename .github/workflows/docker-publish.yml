@@ -8,8 +8,6 @@ env:
   GH_REGISTRY: ghcr.io
   # github.repository as <account>/<repo>
   GH_IMAGE_NAME: ${{ github.repository }}
-  DOCKER_REGISTRY: docker.io
-  DOCKER_IMAGE_NAME: simonszu/dosage
 
 jobs:
   build:
@@ -36,7 +34,6 @@ jobs:
         with:
           images: |
             ${{ env.GH_REGISTRY }}/${{ env.GH_IMAGE_NAME }}
-            ${{ env.DOCKER_IMAGE_NAME }}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
