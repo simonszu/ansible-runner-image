@@ -8,3 +8,5 @@ RUN apt-get update \
     && pip install \
       ansible \
       requests
+
+RUN ansible-galaxy collection install community.docker --upgrade
