@@ -4,7 +4,7 @@ RUN apt-get update \
     && apt-get install -y \
       git \
       openssh-client \
-      python3-pip
+      python3-pip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && pip install \
