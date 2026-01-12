@@ -4,6 +4,12 @@ on:
   push:
     branches: [ master ]
 
+env:
+  GH_REGISTRY: ghcr.io
+  # github.repository as <account>/<repo>
+  GH_IMAGE_NAME: ${{ github.repository }}
+  DOCKER_REGISTRY: docker.io
+  DOCKER_IMAGE_NAME: simonszu/dosage
 
 jobs:
   build:
