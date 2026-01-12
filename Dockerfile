@@ -5,4 +5,6 @@ RUN apt-get update \
       git \
       openssh-client \
       python3-pip \
-    && pip install ansible
+    && pip install \
+      ansible \
+      requests
