@@ -4,12 +4,12 @@ RUN apt-get update \
     && apt-get install -y \
       git \
       openssh-client \
-      python3-pip \
-      python3-docker \
-      python3-requests \
+      python3-pip
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && pip install \
-      ansible
+      ansible \
+      docker \
+      requests
 
 RUN ansible-galaxy collection install community.docker --upgrade
